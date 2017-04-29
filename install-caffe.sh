@@ -1,7 +1,7 @@
 #!/bin/bash
 # install common deps
 sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get upgrade -y
 sudo apt-get install -y build-essential cmake make
 sudo apt-get install -y --no-install-recommends libboost-all-dev
 sudo apt-get install -y libprotobuf-dev libleveldb-dev libsnappy-dev libhdf5-serial-dev protobuf-compiler
