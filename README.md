@@ -24,7 +24,7 @@ You just type `bash install-xx.sh` and we do the rest.
 ## Example
 **Install caffe:**
 ```bash
-cd ~/ && git clone --depth 1 git@github.com:Hzzone/ez-install.git
+cd ~/ && git clone --depth 1 https://github.com/Hzzone/ez-install.git
 sudo bash ~/ez-install/install-caffe.sh
 export PYTHONPATH=/path/to/caffe/python:$PYTHONPATH
 python
