@@ -43,7 +43,7 @@ sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ python-gfla
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ backports_abc certifi jsonschema graphviz  qtawesome pydot
 # clone caffe source code
 sudo apt install -y git
-cd ~/ && git clone --depth 1 https://github.com/BVLC/caffe && cd caffe
+cd ~/ && git clone --depth 1 git@github.com:BVLC/caffe.git && cd caffe
 mkdir build && cd build
 cmake -DCPU_ONLY=ON .. && make -j$(nproc)
 ## some other cmake examples ##
