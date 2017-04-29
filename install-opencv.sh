@@ -25,7 +25,9 @@ sudo apt-get install -y unzip wget
 cd ~
 # wget https://github.com/opencv/opencv/archive/3.2.0.zip
 # alternative link for CN user
-wget http://zhaok-data.oss-cn-shanghai.aliyuncs.com/service/opencv/3.2.0.zip
+if [ ! -f "3.2.0.zip" ]; then
+	wget http://zhaok-data.oss-cn-shanghai.aliyuncs.com/service/opencv/3.2.0.zip
+fi		
 
 unzip 3.2.0.zip
 # rm 3.2.0.zip

@@ -30,6 +30,7 @@ echo 'export CPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include:$CP
 echo 'export CPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include:$C_INCLUDE_PATH' >> ~/.bashrc
 . ~/.bashrc
 sudo apt-get install -y python-tk  # tkinter cannot install with pip
+sudo apt-get install -y python-pip
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ scikit-image scikit-learn
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ matplotlib
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ ipython jupyter
@@ -41,6 +42,7 @@ sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ python-date
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ python-gflags pyyaml Pillow six pyzmq singledispatch
 sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ backports_abc certifi jsonschema graphviz  qtawesome pydot
 # clone caffe source code
+sudo apt install -y git
 cd ~/ && git clone --depth 1 https://github.com/BVLC/caffe && cd caffe
 mkdir build && cd build
 cmake -DCPU_ONLY=ON .. && make -j$(nproc)
