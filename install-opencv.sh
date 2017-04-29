@@ -23,9 +23,9 @@ sudo apt-get install -y doxygen
 
 sudo apt-get install -y unzip wget
 cd ~
-wget https://github.com/opencv/opencv/archive/3.2.0.zip
+# wget https://github.com/opencv/opencv/archive/3.2.0.zip
 # alternative link for CN user
-# wget http://zhaok-data.oss-cn-shanghai.aliyuncs.com/service/opencv/3.2.0.zip
+wget http://zhaok-data.oss-cn-shanghai.aliyuncs.com/service/opencv/3.2.0.zip
 
 unzip 3.2.0.zip
 # rm 3.2.0.zip
