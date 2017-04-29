@@ -32,6 +32,18 @@ python
 >>if nothing, caffe has installed successfully
 ```
 
+```shell
+# 上述只对一个终端界面有效，关闭后有需要重新设置
+# 将caffe永久添加到python环境的方法
+cd /usr/lib/python2.7/dist-packages
+sudo vim caffe.pth
+# add /path/to/caffe/python
+# wq
+# Test
+```
+
+
+
 ​*There are alternative links for CN:cn: users to accelerate download due to some special reasons.*
 
 Any problem, don't hesitate to create an [Issue](https://github.com/zeakey/ez-install/issues).
