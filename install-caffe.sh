@@ -19,9 +19,9 @@ if [[ "$(which pip)" == '' ]]; then
     # alternative link for CN users
     # curl http://zhaok-data.oss-cn-shanghai.aliyuncs.com/service/get-pip.py | sudo -H python
 else
-    sudo -H pip install --upgrade pip
+    sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ --upgrade pip
 fi
-sudo -H pip install numpy scipy Cython
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ numpy scipy Cython
 if [ ! -d /usr/lib/python2.7/dist-packages/numpy ]; then
     sudo ln -s /usr/local/lib/python2.7/dist-packages/numpy /usr/lib/python2.7/dist-packages/numpy
 fi
@@ -30,18 +30,18 @@ echo 'export CPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include:$CP
 echo 'export CPATH=/usr/local/lib/python2.7/dist-packages/numpy/core/include:$C_INCLUDE_PATH' >> ~/.bashrc
 . ~/.bashrc
 sudo apt-get install python-tk  # tkinter cannot install with pip
-sudo -H pip install scikit-image scikit-learn
-sudo -H pip install matplotlib
-sudo -H pip install ipython jupyter
-sudo -H pip install protobuf
-sudo -H pip install h5py leveldb lmdb
-sudo -H pip install networkx nose
-sudo -H pip install pandas
-sudo -H pip install python-dateutil
-sudo -H pip install python-gflags pyyaml Pillow six pyzmq singledispatch
-sudo -H pip install backports_abc certifi jsonschema graphviz  qtawesome pydot
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ scikit-image scikit-learn
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ matplotlib
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ ipython jupyter
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ protobuf
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ h5py leveldb lmdb
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ networkx nose
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ pandas
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ python-dateutil
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ python-gflags pyyaml Pillow six pyzmq singledispatch
+sudo -H pip install --index https://pypi.mirrors.ustc.edu.cn/simple/ backports_abc certifi jsonschema graphviz  qtawesome pydot
 # clone caffe source code
-cd ~/ && git clone https://github.com/BVLC/caffe && cd caffe
+cd ~/ && git clone --depth 1 https://github.com/BVLC/caffe && cd caffe
 mkdir build && cd build
 cmake -DCPU_ONLY=ON .. && make -j$(nproc)
 ## some other cmake examples ##

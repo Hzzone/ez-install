@@ -2,6 +2,8 @@
 
 The BLVC/Caffe One-Step installation is only approiate for Ubuntu user
 
+I have tried it on my Ubuntu 17.04 LTS machine
+
 ​On the basis of the original repo, it can accelerate download(pip-install and git clone) for CN:cn: users
 
 #### 中文版
@@ -15,7 +17,7 @@ You just type `bash install-xx.sh` and we do the rest.
 ## Example
 **Install caffe:**
 ```bash
-cd ~/ && git clone git@github.com:zeakey/ez-install
+cd ~/ && git clone --depth 1 git@github.com:Hzzone/ez-install.git
 bash ~/ez-install/install-caffe.sh
 ```
 
