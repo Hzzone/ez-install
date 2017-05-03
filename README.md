@@ -1,6 +1,6 @@
 #### This repo is forked from [/zeakey/ez-install](https://github.com/Hzzone/ez-install)
 
-The BLVC/Caffe One-Step installation is only approiate for Ubuntu user
+The BVLC/Caffe One-Step installation is only approiate for Ubuntu user
 
 I have tried it on my Ubuntu 17.04 LTS machine
 
@@ -11,7 +11,7 @@ If it warns an error `***.h No such file or directory` and then compilation term
 #### 中文版
 
 安装只需要按照例子中的做，我在原作者的基础上:
-* `pip`使用了国内源和`git clone /BLVC/Cafffe`时只复制最新版本
+* `pip`使用了国内源和`git clone /BVLC/Cafffe`时只复制最新版本
 * 使用了原作者的opencv下载地址，并且避免了重新编译时重复下载该文件
 * 新装系统必备的依赖，防止因为缺少依赖重新编译
 * 如果在编译opencv时报`No such file or directory`的错误，根据错误修改相应位置的源码，将`include_next`修改为`include`
